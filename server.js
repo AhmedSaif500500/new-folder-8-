@@ -32,9 +32,14 @@ app.engine('html', require('ejs').renderFile);
 //#region routes 
 
     // تحديد ملف index.html كملف رئيسي
+// app.get('/', (req, res) => {
+//     res.sendFile(path.join(__dirname, 'views', 'index.html'));
+// });
+
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'views', 'index.html'));
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
+
 
     // تحديد ملف index2.html كملف ثانوي
 app.get('/index2', (req, res) => {
